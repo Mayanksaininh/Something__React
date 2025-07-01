@@ -2,9 +2,12 @@
   "name": "react-by-akshya",
   "version": "1.0.0",
   "description": "Something react in this project",
-  "main": "App.js",
+  "source" : "index.html",
   "scripts": {
-    "test": "Jest"
+      "start": "parcel",
+    "build": "parcel build",
+    "test" : "jest"
+ 
   },
   "keywords": [
     "React",
