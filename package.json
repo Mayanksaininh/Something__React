@@ -2,12 +2,11 @@
   "name": "react-by-akshya",
   "version": "1.0.0",
   "description": "Something react in this project",
-  "source" : "index.html",
+  "source": "index.html",
   "scripts": {
-      "start": "parcel",
+    "start": "parcel",
     "build": "parcel build",
-    "test" : "jest"
- 
+    "test": "jest"
   },
   "keywords": [
     "React",
@@ -17,5 +16,14 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.15.4"
-  }
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserlist" : [
+    "last 500 chrome version",
+    "last 20 firfox version",
+    "last 20 yahoo version"
+  ]
 }
