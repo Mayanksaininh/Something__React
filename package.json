@@ -4,8 +4,8 @@
   "description": "Something react in this project",
   "source": "index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
