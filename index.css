@@ -1,5 +1,58 @@
 
-#heading {
- color: red;
- /* background-color: black; */
+.header  {
+    display: flex;
+    justify-content: space-between;
+    border : 1px solid black
+
+}
+
+.Logo-containe {
+     width: 200px;
+    
+}
+
+.Nav-item{
+    padding: 0%;
+}
+
+.Nav-item > ul {
+    font-size: 20px;
+    display: flex;
+    list-style-type: none;
+}
+
+.Nav-item > ul > li {
+    padding: 10px;
+    margin: 10px;
+}
+
+.res-card {
+    width: 200px;
+    height: 300px;
+    padding: 5px;
+    margin: 20px;
+}
+
+.res-card :hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.search {
+    padding: 10px;
+    /* margin : 10px; */
+}
+
+.res-logo {
+     width: 200px;
+    height: 150px;
+}
+
+.res-logo :hover {
+    border : 0.5px solid black;
+    cursor: pointer;
+}
+
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
 }
