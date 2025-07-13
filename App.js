@@ -24,17 +24,120 @@ const Header = () => {
 }
 
 const Restaurant = (props) => {
+   
+  const {RestaurantData} = props;
+
     return (
         <div className="res-card"   style={{backgroundColor: "gray"}}>
             <img className="res-logo"
-            src = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/cvo1djhbwrgfqd64k0tl" alt = "res-img"/>
-            <h3>{props.resName}</h3>
-            <h4>{props.cuisine}</h4>
-            <h4>{props.rating}</h4>
+            src = {"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + RestaurantData.cloudinaryImageId }alt = "res-img"/>
+            
+            <h3>{RestaurantData.name}</h3>
+            <h4>{RestaurantData.cuisines.join(" ,")}</h4>
+            <h4>{RestaurantData.avgRating}</h4>
+            <h4>{RestaurantData.sla.deliveryTime}</h4>
+            <h4>{RestaurantData.aggregatedDiscountInfoV3.subHeader}</h4>
         </div>
 
     )
 }
+
+const Restaurantobj = {"id": "39242",
+                      "name": "KFC",
+                      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/b321fb82-d2f2-4c19-a333-e8b0e8df8134_39242.JPG",
+                      "locality": "Eldeco Station 1 Mall",
+                      "areaName": "Sector 12",
+                      "costForTwo": "₹450 for two",
+                      "cuisines": [
+                        "Burgers",
+                        "Fast Food",
+                        "Rolls & Wraps"
+                      ],
+                      "avgRating": 4.1,
+                      "parentId": "547",
+                      "avgRatingString": "4.1",
+                      "totalRatingsString": "5.8K+",
+                      "sla": {
+                        "deliveryTime": 18,
+                        "lastMileTravel": 2,
+                        "serviceability": "SERVICEABLE",
+                        "slaString": "15-20 mins",
+                        "lastMileTravelString": "2.0 km",
+                        "iconType": "ICON_TYPE_EMPTY"
+                      },
+                      "availability": {
+                        "nextCloseTime": "2025-07-13 23:00:00",
+                        "opened": true
+                      },
+                      "badges": {
+                        "imageBadges": [
+                          {
+                            "imageId": "bolt/big%20rx%20listing%2015%20mins%20.png",
+                            "description": "bolt!"
+                          },
+                          {
+                            "imageId": "Rxawards/_CATEGORY-Burger.png",
+                            "description": "Delivery!"
+                          }
+                        ]
+                      },
+                      "isOpen": true,
+                      "type": "F",
+                      "badgesV2": {
+                        "entityBadges": {
+                          "imageBased": {
+                            "badgeObject": [
+                              {
+                                "attributes": {
+                                  "description": "bolt!",
+                                  "imageId": "bolt/big%20rx%20listing%2015%20mins%20.png"
+                                }
+                              },
+                              {
+                                "attributes": {
+                                  "description": "Delivery!",
+                                  "imageId": "Rxawards/_CATEGORY-Burger.png"
+                                }
+                              }
+                            ]
+                          },
+                          "textBased": {
+                            
+                          },
+                          "textExtendedBadges": {
+                            
+                          }
+                        }
+                      },
+                      "aggregatedDiscountInfoV3": {
+                        "header": "ITEMS",
+                        "subHeader": "AT ₹59"
+                      },
+                      "differentiatedUi": {
+                        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                        "differentiatedUiMediaDetails": {
+                          "lottie": {
+                            
+                          },
+                          "video": {
+                            
+                          }
+                        }
+                      },
+                      "reviewsSummary": {
+                        
+                      },
+                      "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+                      "restaurantOfferPresentationInfo": {
+                        
+                      },
+                      "externalRatings": {
+                        "aggregatedRating": {
+                          "rating": "--"
+                        }
+                      },
+                      "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+                    }
 
 const Body = () => {
     return (
@@ -43,46 +146,10 @@ const Body = () => {
                 <h3>Search</h3>
             </div>
             <div className="restaurant-container">
-                <Restaurant
-                resName = "Meghna foods"
-                cuisine = "Biryani north Indian"
-                rating = "4.3 rating"/>
-
-                <Restaurant
-                 resName = "KFC"
-                cuisine = "Burger"
-                rating = "4.5 rating"/>
-
-                <Restaurant
-                 resName = "Roti wala"
-                cuisine = "Tawa roti"
-                rating = "4.2 rating"/>
-
-                <Restaurant
-                 resName = "Kisaan"
-                cuisine = "Momos"
-                rating = "4.7 rating"/>
-
-                <Restaurant
-                 resName = "hungries"
-                cuisine = "Pizza"
-                rating = "4.3 rating"/>
-
-                <Restaurant
-                 resName = "Origano"
-                cuisine = "Masala-Dosa"
-                rating = "4.4 rating"/>
-
-                <Restaurant
-                 resName = "Janak Dhaba"
-                cuisine = "kadai paneer"
-                rating = "4.5 rating"/>
-              
-                      
-            </div>
-
-        </div>
-    )
+                <Restaurant RestaurantData = {Restaurantobj}/>
+ </div>
+ </div>
+)
 }
 
 const Applayout = () => {
